@@ -1,0 +1,1 @@
+# ai-factory-extension-mcp-template

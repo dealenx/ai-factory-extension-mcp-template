@@ -1,0 +1,12 @@
+{
+  "name": "ai-factory-extension-mcp-template",
+  "version": "1.0.0",
+  "description": "Template: hello MCP server inside ai-factory extension",
+  "mcpServers": [
+    {
+      "key": "hello-mcp",
+      "template": "./mcp/hello-mcp.json",
+      "instruction": "Hello MCP: Set HELLO_API_KEY environment variable"
+    }
+  ]
+}

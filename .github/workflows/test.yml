@@ -27,9 +27,15 @@ jobs:
           npm run build
           npm link
 
-      - name: Create test project
+      - name: Create test project directory
+        run: mkdir -p /tmp/test-project/.opencode/skills
+
+      - name: Install extension
+        run: ai-factory extension add $GITHUB_WORKSPACE
+        working-directory: /tmp/test-project
+
+      - name: Create ai-factory config
         run: |
-          mkdir -p /tmp/test-project/.opencode/skills
           cat <<'EOF' > /tmp/test-project/.ai-factory.json
           {
             "version": "2.2.0",
@@ -49,10 +55,6 @@ jobs:
             "extensions": []
           }
           EOF
-
-      - name: Install extension
-        run: ai-factory extension add $GITHUB_WORKSPACE
-        working-directory: /tmp/test-project
 
       - name: Verify extension registered
         run: ai-factory extension list 2>&1 | grep "ai-factory-extension-mcp-template"

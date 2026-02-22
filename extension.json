@@ -4,9 +4,9 @@
   "description": "Template: hello MCP server inside ai-factory extension",
   "mcpServers": [
     {
-      "key": "hello-mcp",
-      "template": "./mcp/hello-mcp.json",
-      "instruction": "Hello MCP: Set HELLO_API_KEY environment variable"
+      "key": "playwright",
+      "template": "./mcp/playwright.json",
+      "instruction": "Playwright MCP: Install Chrome to use a web browser"
     }
   ]
 }

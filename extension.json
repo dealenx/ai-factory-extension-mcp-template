@@ -5,7 +5,10 @@
   "mcpServers": [
     {
       "key": "playwright",
-      "template": "./mcp/playwright.json",
+      "template": {
+        "command": "npx",
+        "args": ["@playwright/mcp@latest"]
+      },
       "instruction": "Playwright MCP: Install Chrome to use a web browser"
     }
   ]
